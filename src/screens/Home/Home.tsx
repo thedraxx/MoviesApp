@@ -10,7 +10,7 @@ import HorizontalSlider from '../../components/HorizonalSlider/HorizontalSlider'
 const { width } = Dimensions.get('window')
 
 const Home = () => {
-  const { moviesInCinema, IsLoading } = useMovies()
+  const { moviesInCinema, IsLoading,moviesPopulars } = useMovies()
   const { top } = useSafeAreaInsets()
 
   if (IsLoading) {
@@ -26,7 +26,7 @@ const Home = () => {
       {/* // Carrousel */}
       <HomeView top={top} inputColor="rebeccapurple">
         <Carousel
-          data={moviesInCinema}
+          data={moviesPopulars}
           renderItem={({ item }: any) => <Cards movie={item} />}
           sliderWidth={width}
           itemWidth={300}
