@@ -1,11 +1,10 @@
 import styled from 'styled-components/native';
 
-
-
 export const ContainerImage = styled.View`
-    width:250px;
-    height:420px;
+    width:${(props: { width: number; }) => props.width};
+    height:${(props: { height: number; }) => props.height};;
     flex-direction: row;
+    margin: 0 7px;
 `;
 
 

@@ -5,13 +5,14 @@ import { CardCustom, ContainerImage } from './style'
 
 interface Props{
     movie: Movie
+    height?:number;
+    width?:number;
 }
 
-const Cards = ({movie}:Props) => {
-    console.log(movie.poster_path)
+const Cards = ({movie,height = 420, width = 300}:Props) => {
     const uri = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
   return (
-    <ContainerImage>
+    <ContainerImage height={height} width={width} >
         <CardCustom 
             source={{uri: uri}}
         />
