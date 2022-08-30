@@ -6,6 +6,6 @@ export const Container = styled.View`
 `;
 
 export const CustomText = styled.Text `
-     font-Size: 25 ;
+     font-Size: 25px ;
      font-Weight: bold;
 `

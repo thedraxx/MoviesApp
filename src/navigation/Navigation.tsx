@@ -3,7 +3,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Detail from '../screens/Detail/Detail';
 import Home from '../screens/Home/Home';
 import { Colors } from '../utilities/colors/colors';
-const Stack = createStackNavigator();
+import { Movie } from '../interfaces/MovieInterface';
+
+export type RootStackParams = {
+  Home:undefined;
+  Detail: Movie;
+}
+
+
+const Stack = createStackNavigator<RootStackParams>();
 
 const Navigation = () => {
   return (

@@ -8,5 +8,5 @@ export const Loading = styled.View`
 `;
 
 export const HomeView = styled.View`
-  margin-top: ${(props: { top: number; }) => props.top + 20};
+  margin-top: ${(props: { top: number; }) => props.top + 20}px;
 `;
