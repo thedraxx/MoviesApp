@@ -1,6 +1,5 @@
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { Image, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { Movie } from '../../interfaces/MovieInterface'
 import { CardCustom, ContainerImage } from './style'
