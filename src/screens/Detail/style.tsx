@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { Colors } from '../../utilities/colors/colors';
 
 
 export const ContainerImage = styled.View `
@@ -21,15 +22,16 @@ export const ImagePoster = styled.Image`
 export const ContainerInfo = styled.View`
     margin-top: 20px;
     margin-left: 5px;
-
 `
 
 export const Title = styled.Text`
     font-size: 20px;
     font-weight: bold;
+    color: ${Colors.black}
 `
 
 export const SubTitle = styled.Text`
     font-size: 16px;
     opacity: 0.8;
+    color: ${Colors.black}
 `
