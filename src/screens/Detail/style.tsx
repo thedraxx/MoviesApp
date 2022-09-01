@@ -1,8 +1,9 @@
 import styled from 'styled-components/native';
 import { Colors } from '../../utilities/colors/colors';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
-export const ContainerImage = styled.View `
+export const ContainerImage = styled.View`
     width: 100%;
     height:${(props: { screenHeight: number; }) => props.screenHeight * 0.7}px;;
     justify-content: center;
@@ -27,11 +28,17 @@ export const ContainerInfo = styled.View`
 export const Title = styled.Text`
     font-size: 20px;
     font-weight: bold;
-    color: ${Colors.black}
+    color: ${Colors.black};
 `
 
 export const SubTitle = styled.Text`
     font-size: 16px;
     opacity: 0.8;
-    color: ${Colors.black}
+    color: ${Colors.black};
+`
+
+export const BackButton = styled.TouchableOpacity`
+        position: absolute;
+        top: 25px;
+        left: 5px;
 `
