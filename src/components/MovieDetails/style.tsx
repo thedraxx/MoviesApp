@@ -26,3 +26,7 @@ export const TextOverview = styled.Text`
     font-size: 16px;
 `
 
+export const ContainerCast = styled.View`
+    margin-top:20px;
+
+`

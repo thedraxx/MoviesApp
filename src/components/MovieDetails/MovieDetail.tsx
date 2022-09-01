@@ -3,8 +3,10 @@ import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Cast } from '../../interfaces/creditsInterface';
 import { MovieFull } from '../../interfaces/MovieInterface';
-import { ContainerAverage, Genres, NumberAverage, TextOverview, TextInfo } from './style';
+import { ContainerAverage, Genres, NumberAverage, TextOverview, TextInfo, ContainerCast } from './style';
 import currencyFormatter from "currency-formatter";
+import Casting from '../Casting/Casting';
+
 interface Props {
     movieFull: MovieFull
     cast: Cast[]
@@ -27,23 +29,23 @@ const MovieDetail = ({ movieFull, cast }: Props) => {
 
             {/* Plot */}
 
-            <TextInfo style={{color:'black'}}>Overview</TextInfo>
+            <TextInfo style={{ color: 'black' }}>Overview</TextInfo>
 
-            {/* Casting */}
             <TextOverview>{movieFull.overview}</TextOverview>
 
-            <TextInfo style={{color:'black'}}>Budget</TextInfo>
+            <TextInfo style={{ color: 'black' }}>Budget</TextInfo>
             {/* Budget */}
             <Text>
-            {
-                movieFull.budget === 0 ? <Text>N/A</Text> : currencyFormatter.format(movieFull.budget,{code:'USD'})
-            }
-
-            
+                {
+                    movieFull.budget === 0 ? <Text>N/A</Text> : currencyFormatter.format(movieFull.budget, { code: 'USD' })
+                }
             </Text>
 
+            {/* Casting */}
+            <ContainerCast>
+                <Casting actor={cast[0]} />
+            </ContainerCast>
         </>
-
     )
 }
 
