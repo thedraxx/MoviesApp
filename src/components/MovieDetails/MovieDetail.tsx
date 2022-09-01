@@ -6,6 +6,7 @@ import { MovieFull } from '../../interfaces/MovieInterface';
 import { ContainerAverage, Genres, NumberAverage, TextOverview, TextInfo, ContainerCast } from './style';
 import currencyFormatter from "currency-formatter";
 import Casting from '../Casting/Casting';
+import { FlatList } from 'react-native-gesture-handler';
 
 interface Props {
     movieFull: MovieFull
@@ -41,9 +42,20 @@ const MovieDetail = ({ movieFull, cast }: Props) => {
                 }
             </Text>
 
+
+
             {/* Casting */}
+
             <ContainerCast>
-                <Casting actor={cast[0]} />
+            <TextInfo style={{ color: 'black' }}>Casting</TextInfo>
+                <FlatList 
+                    style={{marginTop:10, height:60}}
+                    data={cast}
+                    keyExtractor={(item)=> item.id.toString()}
+                    renderItem={({item})=> <Casting actor={item} /> }
+                    horizontal={true}
+                    showsVerticalScrollIndicator={false}
+                />
             </ContainerCast>
         </>
     )

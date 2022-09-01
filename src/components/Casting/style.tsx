@@ -5,6 +5,7 @@ export const ViewActors = styled.View`
     flex-direction: row;
     background-color: ${Colors.white};
     border-radius: 20px;
+    margin-right: 25px;
 `
 
 export const ActorInfo = styled.View`

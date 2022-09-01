@@ -16,7 +16,9 @@ const Casting = ({ actor }: Props) => {
 
     return (
         <ViewActors>
-            <ProfileImage source={{ uri }} />
+            {
+                actor.profile_path &&   <ProfileImage source={{ uri }} />
+            }
             <ActorInfo>
                 <ActorName>
                     {actor.name}
