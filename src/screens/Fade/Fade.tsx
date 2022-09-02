@@ -1,23 +1,11 @@
-import React, { useRef } from 'react'
-import { View, Text, Animated, Button } from 'react-native';
+import React from 'react'
+import { Animated, Button } from 'react-native';
+import useFade from '../../hooks/useFade';
 import { Container } from './Style';
 
 const Fade = () => {
 
-  const opacity = useRef(new Animated.Value(0.5)).current
-
-  const FadeIn = () => {
-    console.log("hola")
-    Animated.timing(
-      opacity,
-      {
-        toValue: 1,
-        duration: 500,
-        useNativeDriver: true,
-      }
-    ).start();
-
-  }
+  const { FadeIn, FadeOut,opacity} = useFade()
 
   return (
     <Container>
@@ -39,6 +27,10 @@ const Fade = () => {
       />
 
 
+      <Button
+        title='Fade-In'
+        onPress={FadeOut}
+      />
 
     </Container>
   )
