@@ -8,6 +8,7 @@ import { HomeView, Loading } from './style';
 import HorizontalSlider from '../../components/HorizonalSlider/HorizontalSlider';
 import GradientBackground from '../../components/GradientBackground/GradientBackground';
 import ImageColors from 'react-native-image-colors'
+import getColores from '../../helpers/getColores';
 
 const { width } = Dimensions.get('window')
 
@@ -18,9 +19,9 @@ const Home = () => {
   const getPosterColors = async (index:number) => {
     const movie= now_playing[index];
     const uri = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-    const result = await ImageColors.getColors(uri, {})
-    console.log(result)
-
+    const {primary,secondary} =  await getColores(uri)
+    console.log(primary)
+    console.log(secondary)
   }
 
   if (IsLoading) {
