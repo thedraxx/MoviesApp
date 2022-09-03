@@ -1,5 +1,5 @@
 import Carousel from 'react-native-snap-carousel';
-import React,{useContext} from 'react';
+import React,{useContext,useEffect} from 'react';
 import { ActivityIndicator, Dimensions, ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Cards from '../../components/Card/Cards';
@@ -24,6 +24,12 @@ const Home = () => {
     const {primary='green',secondary='blue'} =  await getColores(uri)
     setMainColors({primary,secondary})
   }
+
+  useEffect(() => {
+    if (now_playing.length > 0) {
+      getPosterColors(0)
+    }
+  }, [now_playing])
 
   if (IsLoading) {
     return (
