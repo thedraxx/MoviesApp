@@ -20,8 +20,6 @@ const Home = () => {
     const movie= now_playing[index];
     const uri = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
     const {primary,secondary} =  await getColores(uri)
-    console.log(primary)
-    console.log(secondary)
   }
 
   if (IsLoading) {
