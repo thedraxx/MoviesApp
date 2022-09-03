@@ -5,8 +5,8 @@ import Fade from './src/screens/Fade/Fade';
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <Navigation /> */}
-      <Fade />
+      <Navigation />
+      {/* <Fade /> */}
     </NavigationContainer>
   );
 };

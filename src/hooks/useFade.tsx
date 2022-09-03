@@ -17,7 +17,6 @@ const useFade = () => {
     }
 
     const FadeOut = () => {
-        console.log("hola")
         Animated.timing(
             opacity,
             {
