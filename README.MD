@@ -27,6 +27,11 @@ Styled-Components: 5.3.5
 ```
 react-Navigation: ^6.0.12
 ```
+## 🤍 Versión de react-native-vector-icons
+```
+react-native-vector-icons: ^9.2.0
+```
+
 
 ## ✉️ Contacto
 
